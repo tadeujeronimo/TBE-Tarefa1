@@ -1,0 +1,41 @@
+// Schema Prisma - Catálogo de Editais de Monitoria
+// Tema TCC: Modernização de Sistemas Legados com IA Generativa
+// (Sistema de Monitorias)
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+// Status possíveis de um edital de monitoria
+enum StatusEdital {
+  ABERTO
+  ENCERRADO
+}
+
+model Edital {
+  id                Int          @id @default(autoincrement())
+
+  // "title" do enunciado -> disciplina ofertada na monitoria
+  disciplina        String       @map("title")
+
+  // "description" do enunciado -> descrição/detalhes do edital
+  descricao         String       @db.Text @map("description")
+
+  professor         String
+  curso             String
+  vagas             Int
+  dataAbertura      DateTime     @map("data_abertura")
+  dataEncerramento  DateTime     @map("data_encerramento")
+  status            StatusEdital @default(ABERTO)
+  destaque          Boolean      @default(false)
+
+  createdAt         DateTime     @default(now()) @map("created_at")
+  updatedAt         DateTime     @updatedAt @map("updated_at")
+
+  @@map("editais")
+}

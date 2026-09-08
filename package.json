@@ -1,0 +1,29 @@
+{
+  "name": "catalogo-editais-monitoria",
+  "version": "1.0.0",
+  "description": "API de Catálogo de Editais de Monitoria (Node.js + TypeScript + Express + Prisma + PostgreSQL/Docker) - Tarefa 1 Back-End, tema TCC: Modernização de Sistemas Legados com IA Generativa (Sistema de Monitorias).",
+  "author": "Tadeu Jerônimo <tadeus.jeronimo@gmail.com>",
+  "license": "MIT",
+  "main": "dist/server.js",
+  "scripts": {
+    "dev": "tsx watch src/server.ts",
+    "build": "tsc",
+    "start": "node dist/server.js",
+    "seed": "tsx prisma/seed.ts",
+    "prisma:migrate": "prisma migrate dev",
+    "prisma:generate": "prisma generate",
+    "prisma:studio": "prisma studio"
+  },
+  "dependencies": {
+    "@prisma/client": "^5.19.1",
+    "dotenv": "^16.4.5",
+    "express": "^4.19.2"
+  },
+  "devDependencies": {
+    "@types/express": "^4.17.21",
+    "@types/node": "^20.14.15",
+    "prisma": "^5.19.1",
+    "tsx": "^4.16.2",
+    "typescript": "^5.5.4"
+  }
+}

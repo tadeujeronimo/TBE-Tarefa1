@@ -1,0 +1,203 @@
+{
+  "_type": "export",
+  "__export_format": 4,
+  "__export_date": "2026-09-08T02:34:28.000Z",
+  "__export_source": "insomnia.desktop.app:v8.6.1",
+  "resources": [
+    {
+      "_id": "__WORKSPACE_1__",
+      "parentId": null,
+      "modified": 1788834868511,
+      "created": 1788834868511,
+      "name": "Sistema de Monitorias",
+      "description": "Workspace de testes da API de Catálogo de Editais (TCC - Modernização de Sistemas Legados com IA Generativa / Sistema de Monitorias)",
+      "scope": "collection",
+      "_type": "workspace"
+    },
+    {
+      "_id": "__ENV_1__",
+      "parentId": "__WORKSPACE_1__",
+      "modified": 1788834868511,
+      "created": 1788834868511,
+      "name": "Base Environment",
+      "data": {
+        "base_url": "http://localhost:3333"
+      },
+      "dataPropertyOrder": {
+        "&": [
+          "base_url"
+        ]
+      },
+      "color": null,
+      "isPrivate": false,
+      "metaSortKey": 1788834868511,
+      "_type": "environment"
+    },
+    {
+      "_id": "__FOLDER_1__",
+      "parentId": "__WORKSPACE_1__",
+      "modified": 1788834868511,
+      "created": 1788834868511,
+      "name": "Editais",
+      "description": "",
+      "environment": {},
+      "environmentPropertyOrder": null,
+      "metaSortKey": -1788834868511,
+      "_type": "request_group"
+    },
+    {
+      "_id": "__REQ_STATUS__",
+      "parentId": "__FOLDER_1__",
+      "modified": 1788834868511,
+      "created": 1788834868511,
+      "url": "{{ _.base_url }}/",
+      "name": "GET / (status da API)",
+      "description": "",
+      "method": "GET",
+      "body": {},
+      "parameters": [],
+      "headers": [],
+      "authentication": {},
+      "metaSortKey": -1788834868511,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "__REQ_LIST__",
+      "parentId": "__FOLDER_1__",
+      "modified": 1788834868511,
+      "created": 1788834868511,
+      "url": "{{ _.base_url }}/editais",
+      "name": "GET /editais (listar todos)",
+      "description": "",
+      "method": "GET",
+      "body": {},
+      "parameters": [],
+      "headers": [],
+      "authentication": {},
+      "metaSortKey": -1788834868511,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "__REQ_BYID__",
+      "parentId": "__FOLDER_1__",
+      "modified": 1788834868511,
+      "created": 1788834868511,
+      "url": "{{ _.base_url }}/editais/1",
+      "name": "GET /editais/:id (buscar por id)",
+      "description": "",
+      "method": "GET",
+      "body": {},
+      "parameters": [],
+      "headers": [],
+      "authentication": {},
+      "metaSortKey": -1788834868511,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "__REQ_CREATE__",
+      "parentId": "__FOLDER_1__",
+      "modified": 1788834868511,
+      "created": 1788834868511,
+      "url": "{{ _.base_url }}/editais",
+      "name": "POST /editais (criar - opcional)",
+      "description": "",
+      "method": "POST",
+      "body": {
+        "mimeType": "application/json",
+        "text": "{\n  \"disciplina\": \"Compiladores\",\n  \"descricao\": \"Edital de monitoria da disciplina de Compiladores.\",\n  \"professor\": \"Nome do Professor\",\n  \"curso\": \"Ciência da Computação\",\n  \"vagas\": 1,\n  \"dataAbertura\": \"2026-08-01\",\n  \"dataEncerramento\": \"2026-08-20\",\n  \"status\": \"ABERTO\",\n  \"destaque\": false\n}"
+      },
+      "parameters": [],
+      "headers": [
+        {
+          "name": "Content-Type",
+          "value": "application/json"
+        }
+      ],
+      "authentication": {},
+      "metaSortKey": -1788834868511,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "__REQ_UPDATE__",
+      "parentId": "__FOLDER_1__",
+      "modified": 1788834868511,
+      "created": 1788834868511,
+      "url": "{{ _.base_url }}/editais/1",
+      "name": "PUT /editais/:id (atualizar - opcional)",
+      "description": "",
+      "method": "PUT",
+      "body": {
+        "mimeType": "application/json",
+        "text": "{\n  \"vagas\": 3,\n  \"status\": \"ENCERRADO\"\n}"
+      },
+      "parameters": [],
+      "headers": [
+        {
+          "name": "Content-Type",
+          "value": "application/json"
+        }
+      ],
+      "authentication": {},
+      "metaSortKey": -1788834868511,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "__REQ_DELETE__",
+      "parentId": "__FOLDER_1__",
+      "modified": 1788834868511,
+      "created": 1788834868511,
+      "url": "{{ _.base_url }}/editais/1",
+      "name": "DELETE /editais/:id (remover - opcional)",
+      "description": "",
+      "method": "DELETE",
+      "body": {},
+      "parameters": [],
+      "headers": [],
+      "authentication": {},
+      "metaSortKey": -1788834868511,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    }
+  ]
+}
