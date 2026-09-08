@@ -150,6 +150,11 @@ TBE-Tarefa1/
         └── edital.routes.ts
 ```
 
+## Vídeo explicativo no YouTube (não listado):
+
+[https://youtu.be/g5FOfy6mXKA](https://youtu.be/g5FOfy6mXKA)
+
+
 ## Autor
 
 - **Nome**: Tadeu dos Santos Jerônimo

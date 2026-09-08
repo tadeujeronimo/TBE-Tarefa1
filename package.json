@@ -1,7 +1,7 @@
 {
   "name": "catalogo-editais-monitoria",
   "version": "1.0.0",
-  "description": "API de Catálogo de Editais de Monitoria (Node.js + TypeScript + Express + Prisma + PostgreSQL/Docker) - Tarefa 1 Back-End, tema TCC: Modernização de Sistemas Legados com IA Generativa (Sistema de Monitorias).",
+  "description": "API de Catálogo de Editais de Monitoria (Node.js + TypeScript + Express + Prisma + PostgreSQL/Docker).",
   "author": "Tadeu Jerônimo <tadeus.jeronimo@gmail.com>",
   "license": "MIT",
   "main": "dist/server.js",
